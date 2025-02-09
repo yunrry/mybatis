@@ -1,7 +1,7 @@
-create table board(
-    seq int auto_increment primary key,
-    title varchar not null,
-    contents varchar not null,
-    reg_user varchar not null,
-    reg_date TIMESTAMP default CURRENT_TIMESTAMP not null
+CREATE TABLE board (
+                       seq INT AUTO_INCREMENT PRIMARY KEY,
+                       title VARCHAR(255) NOT NULL,
+                       contents VARCHAR(1000) NOT NULL,
+                       reg_user VARCHAR(100) NOT NULL,
+                       reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
 );

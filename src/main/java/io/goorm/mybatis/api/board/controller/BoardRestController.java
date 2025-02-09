@@ -32,37 +32,37 @@ public class BoardRestController {
         return list;
     }
 
-//    @GetMapping("/boards/{seq}")
-//    public Board get(@PathVariable Long seq) {
-//        log.debug("seq : " + seq);
-//        return boardService.getBoardById(seq);
-//    }
-//
-//    @PostMapping("/boards")
-//    public int post(@RequestBody Board board) {
-//        log.debug("title : " + board.getTitle());
-//        log.debug("contents : " + board.getContents());
-//        log.debug("reguser : " + board.getRegUser());
-//
-//        return boardService.createBoard(board);
-//    }
-//
-//    @PutMapping("/boards/{seq}")
-//    public int put(@PathVariable Long seq, @RequestBody Board board) {
-//        log.debug("seq : " + seq);
-//        log.debug("title : " + board.getTitle());
-//        log.debug("contents : " + board.getContents());
-//        log.debug("reguser : " + board.getRegUser());
-//
-//        return boardService.updateBoard(board);
-//    }
-//
-//    @DeleteMapping("/boards/{seq}")
-//    public boolean delete(@PathVariable Long seq) {
-//        log.debug("seq : " + seq);
-//
-//        return boardService.deleteBoard(seq);
-//    }
+    @GetMapping("/boards/{seq}")
+    public Board get(@PathVariable Long seq) {
+        log.debug("seq : " + seq);
+        return boardService.getBoardById(seq);
+    }
+
+    @PostMapping("/boards")
+    public int post(@RequestBody Board board) {
+        log.debug("title : " + board.getTitle());
+        log.debug("contents : " + board.getContents());
+        log.debug("reguser : " + board.getRegUser());
+
+        return boardService.createBoard(board);
+    }
+
+    @PutMapping("/boards/{seq}")
+    public Board put(@PathVariable Long seq, @RequestBody Board board) {
+        log.debug("seq : " + seq);
+        log.debug("title : " + board.getTitle());
+        log.debug("contents : " + board.getContents());
+        log.debug("reguser : " + board.getRegUser());
+
+        return boardService.updateBoard(board);
+    }
+
+    @DeleteMapping("/boards/{seq}")
+    public boolean delete(@PathVariable Long seq) {
+        log.debug("seq : " + seq);
+
+        return boardService.deleteBoard(seq);
+    }
 
 
 
