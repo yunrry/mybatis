@@ -29,9 +29,9 @@ public class BoardController {
     }
 
     @GetMapping("/boards/{seq}")
-    public String get(@PathVariable Long seq, Model model) {
+    public String get(@PathVariable("seq") Long seq, Model model) {
         log.debug("seq : " + seq);
-        model.addAttribute("posts", boardService.getBoardById(seq));
+        model.addAttribute("post", boardService.getBoardById(seq));
         return "board/view";
     }
 
@@ -47,8 +47,8 @@ public class BoardController {
     }
 
     @GetMapping("/boards/update/{seq}")
-    public String update(@PathVariable Long seq, Model model) {
-        model.addAttribute("posts", boardService.getBoardById(seq));
+    public String update(@PathVariable("seq") Long seq, Model model) {
+        model.addAttribute("post", boardService.getBoardById(seq));
         return "board/edit";
     }
 

@@ -46,7 +46,7 @@
                     ( title LIKE CONCAT('%', #{searchtxt}, '%') OR contents LIKE CONCAT('%', #{searchtxt}, '%') )
                 </when>
                 <when test="condition == 'title'">
-                    title LIKE CONCAT('%', #{searchtxt}, '%')
+                    title LIKE CONCAT('%', #{searchtxt}, '%').
                 </when>
                 <otherwise>
                     <if test="condition == 'contents'">
